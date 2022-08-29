@@ -1,0 +1,167 @@
+version: "2.0"
+
+stories:
+
+- story: happy path
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: mood_great
+  - action: utter_happy
+
+- story: sad path 1
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: mood_unhappy
+  - action: utter_cheer_up
+  - action: utter_did_that_help
+  - intent: affirm
+  - action: utter_happy
+
+- story: sad path 2
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: mood_unhappy
+  - action: utter_cheer_up
+  - action: utter_did_that_help
+  - intent: deny
+  - action: utter_goodbye
+
+- story: covid path1
+  steps:
+  - intent: covid_intro
+  - action: utter_covid_intro
+
+- story: covid spread1
+  steps: 
+  - intent: covid_spread
+  - action: utter_covid_spread
+
+- story: covid path2
+  steps:
+  - intent: corona_food_spread   
+  - action: utter_corona_food_spread 
+
+- story: covid path3
+  steps:
+  - intent: corona_spread_warm
+  - action: utter_corona_spread_warm
+
+- story: corona community spread path
+  steps:
+  - intent: corona_community
+  - action: utter_corona_community
+
+
+- story: corona symptoms path
+  steps:
+  - intent: corona_symptoms
+  - action: utter_corona_symptoms
+
+- story: corona mosquito path
+  steps:
+  - intent: corona_mosq_spread
+  - action: utter_corona_mosq_spread
+
+- story: corona prevent path
+  steps:
+  - intent: corona_prevent
+  - action: utter_corona_prevent  
+
+- story: corona vaccine path
+  steps:
+  - intent: corona_vaccine
+  - action: utter_corona_vaccine  
+
+- story: corona infected path
+  steps:
+  - intent: corona_infected person
+  - action: utter_corona_infected person  
+
+# - story: corona tracker path
+#   steps:
+#   - intent: greet
+#   - action: utter_greet
+#   - intent: corona_stats_check
+#   - action: utter_corona_stats_check
+#   - intent: corona_states_stat
+#   - action: actions_corona_state_stat
+
+# - story: corona tracker 2 path
+#   steps:
+#   - intent: corona_stats_check
+#   - action: utter_corona_stats_check
+#   - intent: corona_states_stat
+#   - action: actions_corona_state_stat
+
+- story: corona tracker 2 path
+  steps:
+  - intent: corona_stats_check
+  - action: utter_corona_stats_check
+  - intent: corona_states_stat
+  - action: actions_corona_state_stat
+  - intent: Active
+  - action: actions_corona_state_stat_active
+
+- story: corona tracker 3 path
+  steps:
+  - intent: corona_stats_check
+  - action: utter_corona_stats_check
+  - intent: corona_states_stat
+  - action: actions_corona_state_stat
+  - intent: Conformed
+  - action: actions_corona_state_stat_conform 
+
+- story: corona tracker 4 path
+  steps:
+  - intent: corona_stats_check
+  - action: utter_corona_stats_check
+  - intent: corona_states_stat
+  - action: actions_corona_state_stat
+  - intent: Recovered
+  - action: actions_corona_state_stat_recover 
+
+
+- story: thanks path
+  steps:
+  - intent: Thanks
+  - action: utter_Thanks
+
+- story: covid path
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: globalcovid_pandemic
+  - action: utter_globalcovid_pandemic
+  - intent: COVID_Description
+  - action: utter_covid_description
+  - intent: Testing_information
+  - action: utter_testing_information
+  - intent: Treatment_info
+  - action: utter_treatment_info
+
+- story: treat path
+  steps:
+  - intent: Treatment_info
+  - action: utter_treatment_info
+  - intent: fine
+  - action: utter_fine
+  - intent: covid_more_info
+  - action: utter_covid_more_info
+
+- story: trrat path
+  steps:
+  - intent: Treatment_info
+  - action: utter_treatment_info
+  - intent: fine
+  - action: utter_fine
+  - intent: goodbye
+  - action: utter_goodbye  
+
+- story: start path
+  steps: 
+  - intent: get_started
+  - action: utter_get_started
+

@@ -1,0 +1,45 @@
+<!doctype html>
+<html>
+<head>
+  <style>
+      body{
+        background-image: url("https://images.unsplash.com/photo-1584036561566-baf8f5f1b144?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8Y29yb25hdmlydXN8ZW58MHx8MHx8&w=1000&q=80");
+        background-size: cover;
+        height:100vh;
+       
+
+      }
+  </style>
+</head>
+<body>
+    <h1 style="color: white; text-align:center">Covid ChatBOt</h1>
+    <script>!(function () {
+    //creating a element node and assigned to 'e'
+  let e = document.createElement("script"),
+  // "||" operator like that is a form of feature detection.
+    t = document.head || document.getElementsByTagName("head")[0];
+    // src property sets or returns the value of the src attribute of a script.
+  (e.src =
+    "https://cdn.jsdelivr.net/npm/rasa-webchat@1.0.0/lib/index.js"),
+    //1.0.0 is the version of Rasa web chat
+
+    (e.async = !0),
+    (e.onload = () => {
+      window.WebChat.default(
+        {
+          initPayload: "/get_started",
+
+          // arbitrary custom data. Stay minimal as this will be added to the socket
+          customData: { language: "en" },
+          socketUrl: "http://localhost:5005",
+          // add other props here
+        },
+        null
+      );
+    }),
+    t.insertBefore(e, t.firstChild);
+})();
+localStorage.clear()
+</script>
+</body>
+</html>
